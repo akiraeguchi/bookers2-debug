@@ -1,0 +1,13 @@
+ <%= form_with model: book, url: '/books', local:true do |f| %>
+      <div class="form-group">
+        <label for="book_title">Title</label>
+        <input type="text" class="form-control" name="book[title]" id="book_title">
+      </div>
+      <div class="form-group">
+        <label for="book_opinion">Opinion</label>
+        <textarea class="form-control book_body" name="book[body]" id="book_body" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-success" name="commit" value="Create Book" data-disable-with="Create Book">
+  <% end %>
+      </div>
