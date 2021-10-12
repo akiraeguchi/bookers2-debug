@@ -21,11 +21,13 @@
           <%= link_to book_favorites_path(book), class: "fas fa-heart text-danger", method: :delete do %><%= book.favorites.count %>
           <% end %>
         </td>
+        <td><span>コメント数:</span><%= book.book_comments.count %></td>
         <% else %>
         <td>
           <%= link_to book_favorites_path(book), class: "fas fa-heart text-primary", method: :post do %><%= book.favorites.count %>
           <% end %>
         </td>
+        <td><span>コメント数:</span><%= book.book_comments.count %></td>
         <% end %>
       </tr>
     <% end %>
