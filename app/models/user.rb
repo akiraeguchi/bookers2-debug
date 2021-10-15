@@ -32,8 +32,5 @@ class User < ApplicationRecord
   def following?(other_user)
     self.followings.include?(other_user)
   end
-  
-  def self.search(method,word)
-    if method == ""
-  
+
 end
