@@ -1,0 +1,4 @@
+$('.comment-count').html("<%= escape_javascript(render partial: 'comment-count', locals: {book: @book}) %>");
+$('.comment').html("<%= escape_javascript(render partial: 'comment', locals: {book: @book}) %>");
+$('#comment-error').html("<%= escape_javascript(render partial: 'error', locals: {error_comment: @error_comment}) %>");
+$('textarea').val('');

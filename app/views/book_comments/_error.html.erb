@@ -1,0 +1,10 @@
+<% if error_comment.present? %>
+  <div id="error_explanation", class="text-danger">
+    <h2><%= error_comment.errors.count %> errors prohibited this book from being saved:</h2>
+    <ul>
+      <% error_comment.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+      <% end %>
+          </ul>
+        </div>
+      <% end %>

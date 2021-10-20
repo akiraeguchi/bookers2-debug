@@ -1,0 +1,2 @@
+<%= link_to book_favorites_path(book), class: "fas fa-heart text-danger", method: :delete, remote: true do %><%= book.favorites.count %>
+<% end %>
