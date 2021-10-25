@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'homes#top'
   get 'home/about' => 'homes#about'
 
@@ -17,5 +18,8 @@ Rails.application.routes.draw do
   get 'followers' => 'relationships#show_follower'
 
   get '/search' , to: 'searches#search'
+
+  get 'chats/:id', to: 'chats#show', as: 'chat'
+  resources :chats, only: [:create]
 
 end

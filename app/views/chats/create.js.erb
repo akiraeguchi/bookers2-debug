@@ -1,0 +1,2 @@
+$('.chat-message').html("<%= escape_javascript(render partial: 'chats/chat-message', locals: {chats: @chats}) %>");
+$('textfield').val('');
