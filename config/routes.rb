@@ -19,7 +19,6 @@ Rails.application.routes.draw do
 
   get '/search' , to: 'searches#search'
 
-  get 'chats/:id', to: 'chats#show', as: 'chat'
-  resources :chats, only: [:create]
+  resources :chats, only: [:show, :create]
 
 end
