@@ -22,11 +22,13 @@
               <%= render 'favorites/favorite-btn-danger', book: @book %>
             </td>
             <td class="comment-count"><%= render 'book_comments/comment-count', book: @book %></td>
+            <td class="impressionist-count"><%= render 'books/impressionist-count', book: @book %></td>
           <% else %>
             <td class="favorite-btn-<%= @book.id %>">
               <%= render 'favorites/favorite-btn-primary', book: @book %>
             </td>
             <td class="comment-count"><%= render 'book_comments/comment-count', book: @book %></td>
+            <td class="impressionist-count"><%= render 'books/impressionist-count', book: @book %></td>
           <% end %>
           <% if @book.user == current_user %>
             <td><%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success edit_book_#{@book.id}" %></td>

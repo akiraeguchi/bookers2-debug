@@ -21,11 +21,13 @@
           <%= render 'favorites/favorite-btn-danger', book: book %>
         </td>
         <td><span>コメント数:</span><%= book.book_comments.count %></td>
+        <td class="impressionist-count"><%= render 'books/impressionist-count', book: book %></td>
         <% else %>
         <td class="favorite-btn-<%= book.id %>">
           <%= render 'favorites/favorite-btn-primary', book: book %>
         </td>
         <td><span>コメント数:</span><%= book.book_comments.count %></td>
+        <td class="impressionist-count"><%= render 'books/impressionist-count', book: book %></td>
         <% end %>
       </tr>
     <% end %>
